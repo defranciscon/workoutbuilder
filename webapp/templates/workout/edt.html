@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% block container %}
+{% include 'components/offcanvas-btn.html' %}
+<div class="container mt-5 p-3 bg-info bg-opacity-10 border-start-0 rounded-end w-50">
+    <h1 class="text-center">Escalating Density Training</h1>
+    <br>
+    <div class="container">
+        <form method="POST" action="{{url_for('.new_edt')}}" role="form">
+            {{ form.csrf_token }}
+            <div class="form-group mb-3">
+                {% include 'components/title.html' %}
+                
+                {% include 'components/block-reps.html' %}
+                
+                {% include 'circuits/circuit-8.html' %}
+            
+                {% include 'components/submit-button.html'%}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

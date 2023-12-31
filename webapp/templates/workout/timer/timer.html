@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block container %}
+<div class="container">
+    <form method="POST" action="{{url_for('timer.init_timer')}}" role="form">
+        <div class="row g-3">
+            <div class="col-md-12">
+                
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="d-grid gap-2">
+                
+            </div>  
+        </div>
+        <div class="row g-3">
+            <div class="d-grid gap-2">
+                <div class="mb-2">{{ form.start(class="btn btn-lg btn-primary bg-gradient fs-4")}}</div>
+            </div>  
+        </div>
+    </form>
+</div> 
+{% endblock %}

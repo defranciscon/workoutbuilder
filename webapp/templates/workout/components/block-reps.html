@@ -1,0 +1,12 @@
+{% block container %}
+<div class="row g-3 border-bottom border-black">
+    <div class="col-md-6 mb-3">
+        <h3>Block Time (min)</h3>
+        {{ form.block(class="form-control form-control-lg")}}
+    </div>
+    <div class="col-md-6 mb-3">
+        <h3>Reps per Set</h3>
+        {{ form.reps(class="form-control form-control-lg")}}
+    </div>
+</div>
+{% endblock %}

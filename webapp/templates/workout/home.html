@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block container %}
+<div class="container-xxl-1 bg-light bd-gutter flex-wrap flex-lg-nowrap">
+    <div class="container-fluid">
+        <div class="row d-grid gap-2">
+            <div class="col ms-25 p-3">
+                <h1 class="display-1">Simple workout designs with state-of-the-art science</h1>
+            </div>
+        </div>
+        <div class="col-8 bg-light mx-auto mt-5">
+            <h2 class="mb-3">Get started by following these simple directions</h2>
+            {%include 'accordion.html'%}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            {%include 'maincards.html'%}
+        </div>
+    </div>
+</div>
+{% endblock container %}

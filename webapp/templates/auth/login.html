@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% block container %}
+<div class="container mt-5 p-3 bg-info bg-opacity-10 border-start-0 rounded-end w-50">
+    <h1 class="text-center">Login</h1>
+    <br>
+    <div class="container text-left">
+        <form method="POST" action="{{url_for('auth.login')}}" role="form">
+            <div class="form-group mb-3">
+                <div class="row g-3">
+                    <div class="col-md-12">
+                        <label>{{form.username.label(class="col-form-label col-form-label-lg")}}</label>
+                        <div class="mb-2">{{form.username(class="form-control form-control-lg w-100")}}</div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-12">
+                        <label>{{form.password.label(class="col-form-label col-form-label-lg")}}</label>
+                        <div class="mb-2">{{form.password(class="form-control form-control-lg w-100")}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-1">
+                <div class="d-grid gap-2">
+                    {{ form.submit(class="btn btn-lg btn-primary bg-gradient fs-4")}}
+                </div>  
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

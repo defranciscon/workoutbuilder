@@ -1,0 +1,44 @@
+{%block container%}
+<div class="card-group mt-2">
+    <div class="col-sm-3 align-self-start p-3">
+        <div class="card shadow border h-100">
+            <div class="card-body">
+                <h5 class="card-title text-center">Escalating Density Training</h5>
+                <div class="d-grid col-6 mx-auto">
+                    <a class="btn btn-secondary btn-lg" href="{{url_for('workout.new_edt')}}">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 align-self-center p-3">
+        <div class="card shadow border h-100">
+            <div class="card-body">
+                <h5 class="card-title text-center">Tabata Timed Intervals</h5>
+                <div class="d-grid col-6 mx-auto">
+                    <a class="btn btn-secondary btn-lg" href="{{url_for('workout.new_tabata')}}">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 align-self-end p-3">
+        <div class="card shadow border h-100">
+            <div class="card-body">
+                <h5 class="card-title text-center">Sequential Timed Intervals</h5>
+                <div class="d-grid col-6 mx-auto">
+                    <a class="btn btn-secondary btn-lg" href="{{url_for('workout.new_sequential')}}">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 align-self-end p-3">
+        <div class="card shadow border h-100">
+            <div class="card-body">
+                <h5 class="card-title text-center">Undulating Timed Intervals</h5>
+                <div class="d-grid col-6 mx-auto">
+                    <a class="btn btn-secondary btn-lg" href="{{url_for('workout.new_undulating')}}">Start</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

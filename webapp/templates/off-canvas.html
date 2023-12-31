@@ -1,0 +1,28 @@
+{% block container %}
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Workout Choices</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div>
+            Select a different workout by clicking one of the buttons below:
+        </div>
+        <br><br>
+        <div class="list-group">
+            <a href="{{url_for('workout.new_edt')}}" class="list-group-item list-group-item-action">
+                Escalating Density Training
+            </a>
+            <a href="{{url_for('workout.new_tabata')}}" class="list-group-item list-group-item-action">
+                Tabata Timed Intervals
+            </a>
+            <a href="{{url_for('workout.new_sequential')}}" class="list-group-item list-group-item-action">
+                Sequential Timed Intervals
+            </a>
+            <a href="{{url_for('workout.new_undulating')}}" class="list-group-item list-group-item-action">
+                Undulating Timed Intervals
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

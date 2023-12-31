@@ -1,0 +1,35 @@
+<header class="navbar sticky-top navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+        <a class="navbar-brand ps-sm-2 fs-2">Workout Builder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav">
+            <div class="row gx-2">
+                {% if current_user.is_authenticated %}
+                <div class="col">
+                    <div class="pe-sm-5 fs-4">
+                        <a class="nav-link pe-3"href="{{url_for('workout.home')}}">Home</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="pe-sm-5 fs-4">
+                        <a class="nav-link pe-3"href="{{url_for('auth.logout')}}">Logout</a>
+                    </div>
+                </div>
+                {% else %}
+                <div class="col">
+                    <div class="pe-sm-5 fs-4">
+                        <a class="nav-link pe-3"href="{{url_for('auth.login')}}">Login</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="pe-sm-5 fs-4">
+                        <a class="nav-link pe-3"href="{{url_for('auth.register')}}">Register</a>
+                    </div>
+                </div>
+                {% endif%}
+            </div>
+        </div>
+    </nav>
+</header>

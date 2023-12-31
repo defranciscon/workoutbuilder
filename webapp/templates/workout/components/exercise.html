@@ -1,0 +1,10 @@
+{% block container %}
+<div class="row g-3" id="exerciseGroup">
+    <div class="col-md-12">
+        <label>{{form.exercise.label(class="col-form-label col-form-label-lg")}}</label>
+        <div class="mb-2" id="exercise">
+            {{form.exercise(class="form-control form-control-lg w-100")}}
+        </div>
+    </div>
+</div>
+{% endblock %}
