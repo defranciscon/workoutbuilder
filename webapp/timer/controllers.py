@@ -16,7 +16,9 @@ timer_blueprint = Blueprint(
     url_prefix="/timer"
     )
 
-@timer_blueprint.route("/timer")
+# TODO : add parameter to init_timer() function to take in the workout id that 
+# matches is the saved workout title
+@timer_blueprint.route("/")
 def init_timer():
     form = TimeStarter(request.form)
     if form.validate():
@@ -24,7 +26,7 @@ def init_timer():
         timer = IntervalTimer(20, 10, 4, 60, 1)
         if start:
             timer.run_circuit()
-    return render_template("timer.html")
+    return render_template("timer.html", form=form)
 
 
 

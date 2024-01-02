@@ -1,0 +1,10 @@
+{% block container %}
+<div class="container d-flex flex-column mb-3 flex-wrap">
+    <h3 class="text-start">Saved Workouts</h3>
+    <ul class="list-group">
+        {% for workout in all_workouts %}
+            <a href="{{url_for('timer.init_timer')}}" class="list-group-item"> {{ workout['title'] }} </a>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

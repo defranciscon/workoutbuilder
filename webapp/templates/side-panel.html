@@ -1,0 +1,16 @@
+{% block container %}
+<div class="offcanvas-body">
+    <div>
+        Select a different workout by clicking one of the buttons below:
+    </div>
+    <br><br>
+    <div class="list-group">
+        <a href="{{url_for('timer.init_timer')}}" class="list-group-item list-group-item-action">
+        </a>
+        <a href="{{url_for('timer.init_timer')}}" class="list-group-item list-group-item-action">
+        </a>
+        <a href="{{url_for('timer.init_timer')}}" class="list-group-item list-group-item-action">
+        </a>
+    </div>
+</div>
+{% endblock %}

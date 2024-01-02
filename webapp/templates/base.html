@@ -14,7 +14,8 @@
         {% include 'navbar.html' %}
         {% include 'flash_messages.html' %}
         <br>
-        {% block container %}{% endblock %}
+        {% block container %}
+        {% endblock %}
         <br><br>
         <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
         <script 

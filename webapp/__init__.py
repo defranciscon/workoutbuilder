@@ -16,7 +16,7 @@ def page_not_found(error):
 
 def create_app(object_name):
     """
-    A flask application factor, as explained here:
+    A flask application factory, as explained here:
     http://flask.pocoo.org/docs/patterns/appfactories
     Args:
         object_name: the python path of the config object,

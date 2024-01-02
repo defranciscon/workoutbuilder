@@ -24,8 +24,32 @@ class Workout:
             {": ".join(('Circuit', (str(count)))): item for count, item in enumerate(self.workout.items())})
         
         self.collection.insert_one(container)
+    
+    def get_all_workouts(self):
         
+        all_workouts = {}
         
+        for document in self.collection.find():
+            
+            all_workouts.update(document)
+                
+        return all_workouts
+    
+    def get_workout_by_title(self, title):
+        
+        self.title = title
+        
+        for document in self.collection.find_one({"title"}, self.title):
+            
+            if not document:
+                
+                return 'Workout not found because title does not exist'
+            
+            else:
+                
+                return document
+            
+            
     def get_workout(self, _id):
         
         self._id = _id
@@ -57,4 +81,36 @@ class Workout:
                 
                 self.collection.delete_one(document)
                 
+
+class WorkoutList:
+    
+    dbs = client['test']
+    
+    collection = dbs['testworkouts']
+    
+    def __init__(self):
+        self.all_workouts = []
+    
+    def get_all_workouts(self):
         
+        for document in self.collection.find({}):
+            
+            self.all_workouts.append(document)
+                
+        return self.all_workouts
+            
+    
+    def get_workout_by_title(self, title):
+        
+        self.title = title
+        
+        for document in self.collection.find_one({"title"}, self.title):
+            
+            if not document:
+                
+                return 'Workout not found because title does not exist'
+            
+            else:
+                
+                return document
+         

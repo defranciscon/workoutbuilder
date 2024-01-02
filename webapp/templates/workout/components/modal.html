@@ -1,0 +1,19 @@
+{% block container %}
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Workout Saved. Do you want to run your workout?
+      </div>
+      <div class="modal-footer">
+        <a href="{{url_for('.home')}}" class="btn btn-secondary">Back to Home Page</a>
+        <a href="{{url_for('timer.init_timer')}}" class="btn btn-primary">Run the Workout</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

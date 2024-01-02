@@ -11,7 +11,7 @@ from webapp import api
 from webapp.auth import current_user
 from webapp.auth.models import User
 from webapp.workout.forms import WorkoutForm
-from webapp.workout.models import Workout
+from webapp.workout.models import Workout, WorkoutList
 from .engine.circuit import Circuit
 from .engine.exercises import Exercise
 
@@ -24,8 +24,10 @@ workout_blueprint = Blueprint(
 
 @workout_blueprint.route('/home')
 def home():
-    return render_template('home.html')
-
+    
+    all_workouts = WorkoutList().get_all_workouts()
+        
+    return render_template('home.html', all_workouts=all_workouts)
 
 @workout_blueprint.route('/edt', methods=['GET', 'POST'])
 def new_edt():

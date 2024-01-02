@@ -1,18 +1,16 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-AUTH_USERS = 'authusers'
-
 class Config(object):
     'Base config class'
-    SECRET_KEY = '15acd65d26cfb615ed6983d2ba398b4b7f5038a9645c402e'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     DEBUG = False
     TESTING = False
     CSRF_ENABLED = True
 
 class ProdConfig(Config):
     'Production specific config'
-    SECRET_KEY = '8cfebfbaefb1be12f0bb5ace0fa74bef187e48519ea3d0d1'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 class StagingConfig(Config):
     'Staging specific config'

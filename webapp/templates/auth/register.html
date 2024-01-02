@@ -5,6 +5,7 @@
     <br>
     <div class="container text-left">
         <form method="POST" action="{{url_for('auth.register')}}" role="form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
             <div class="form-group mb-3">
                 <div class="row g-3">
                     <div class="col md-6">
